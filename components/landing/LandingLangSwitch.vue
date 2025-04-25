@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { locale, locales, setLocale } = useI18n()
+const { locale, locales, setLocale, availableLocales } = useI18n()
 
 const selected = ref(locale)
 
@@ -41,12 +41,12 @@ function handleSelect(e: Event) {
       @change="handleSelect"
     >
       <option
-        v-for="loc in locales"
-        :key="loc.code"
-        :value="loc.code"
-        :selected="loc.code === selected"
+        v-for="loc in availableLocales"
+        :key="loc"
+        :value="loc"
+        :selected="loc === selected"
       >
-        {{ loc.code }}
+        {{ loc }}
       </option>
     </select>
   </div>

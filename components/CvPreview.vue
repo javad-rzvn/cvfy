@@ -2,6 +2,7 @@
 import { useCvState } from '~/data/useCvState'
 
 const { formSettings, isLoading } = useCvState()
+const i18n = useI18n()
 </script>
 
 <template>
@@ -21,7 +22,7 @@ const { formSettings, isLoading } = useCvState()
     items-center
     "
   >
-    <div style="min-height: var(--height);">
+    <div style="min-height: var(--height);" :class="{ cv_rtl: i18n.locale.value === 'fa' }">
       <div
         tabindex="0"
         aria-label="CV preview"
@@ -87,6 +88,10 @@ p {
       display: none;
     }
   }
+}
+
+.cv_rtl {
+  direction: rtl;
 }
 
 .cv {

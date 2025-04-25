@@ -30,8 +30,24 @@ const config = {
     { name: 'de-name', code: 'de' },
     { name: 'ar-name', code: 'ar' },
     { name: 'pt-name', code: 'pt' },
+    { name: 'fa-name', code: 'fa' },
   ],
 }
+
+// Watch for locale changes and update the page direction
+// watch(
+//   () => i18n.locale.value,
+//   (newLocale) => {
+//     const rtlLocales = ['fa', 'ar'] // Add all RTL locales here
+//     const htmlElement = document.documentElement
+//     const cvWrapper = document.querySelector('.cvWrapper');
+//     if (rtlLocales.includes(newLocale)) {
+//       cvWrapper.classList.add('rtl');
+//     } else {
+//       cvWrapper.classList.remove('rtl');
+//     }
+//   }
+// )
 
 watch(
   () => formSettings.value,
