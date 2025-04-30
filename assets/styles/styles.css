@@ -19,3 +19,16 @@
   --black: #1f2937;
   --black-darker: #111827;
 }
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../fonts/Vazirmatn[wght].woff2') format('woff2 supports variations'),
+    url('../fonts/Vazirmatn[wght].woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+}

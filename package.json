@@ -8,6 +8,7 @@
     "build": "nuxi build",
     "start": "nuxi start",
     "generate": "nuxi generate",
+    "deploy": "gh-pages -d dist",
     "prepare": "nuxi prepare",
     "preview": "nuxi preview",
     "lint": "eslint .",
@@ -20,6 +21,7 @@
     "@tiptap/starter-kit": "^2.2.4",
     "@tiptap/vue-3": "^2.2.4",
     "core-js": "^3.6.5",
+    "gh-pages": "^6.3.0",
     "nuxt": "^3.13.2"
   },
   "devDependencies": {
